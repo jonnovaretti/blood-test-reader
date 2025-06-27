@@ -1,12 +1,24 @@
 # blood-test-reader
 
-This application helps people to understand their blood test using AI. It will keep the historical tests to later on make an analisys and show up a graph according to the blood test that have been uploaded.
+This repository contains a full stack monorepo managed with Nx. It includes a Next.js client application, a NestJS server application and a shared library with DTOs and types used by both sides.
 
-# technologies
+## Apps
+- **clients**: Next.js frontend located in `apps/clients`.
+- **servers**: NestJS backend located in `apps/servers`.
+- **shared**: library with shared DTOs and database entities in `libs/shared`.
 
-- Nextjs frontend
-  - Vertex AI
-  - Tailwind
-- Nestjs backend
-  - Typeorm
-- Mysql
+## Features
+- Tailwind CSS with shadcn UI and Framer Motion on the client.
+- Google, Facebook and Instagram sign up using NextAuth.
+- Account page to manage personal data and blood tests.
+- Chat page that streams responses from the Vercel AI SDK (OpenAI).
+- MySQL database configured via TypeORM on the server side with JWT authentication, Swagger docs and Cloudinary storage.
+
+## Development
+Install dependencies and run the apps:
+
+```bash
+npm install
+npm run dev:servers  # start NestJS API on port 3001
+npm run dev:clients  # start Next.js app
+```

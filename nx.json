@@ -1,0 +1,16 @@
+{
+  "npmScope": "blood-test-reader",
+  "affected": { "defaultBase": "main" },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nx/workspace/tasks-runners/default",
+      "options": { "cacheableOperations": ["build", "test", "lint"] }
+    }
+  },
+  "workspaceLayout": { "appsDir": "apps", "libsDir": "libs" },
+  "projects": {
+    "clients": { "root": "apps/clients", "projectType": "application" },
+    "servers": { "root": "apps/servers", "projectType": "application" },
+    "shared": { "root": "libs/shared", "projectType": "library" }
+  }
+}
