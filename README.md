@@ -1,11 +1,12 @@
 # blood-test-reader
 
-This repository contains a full stack monorepo managed with Nx. It includes a Next.js client application, a NestJS server application and a shared library with DTOs and types used by both sides.
+This repository contains a full stack monorepo managed with Nx. It includes a Next.js client application, a NestJS server application and a shared library with DTOs used by both sides.
 
 ## Apps
 - **clients**: Next.js frontend located in `apps/clients`.
 - **servers**: NestJS backend located in `apps/servers`.
-- **shared**: library with shared DTOs and database entities in `libs/shared`.
+- **shared**: library with shared DTOs in `libs/shared`.
+- Database entities live in server modules under `apps/servers/src`.
 
 ## Features
 - Tailwind CSS with shadcn UI and Framer Motion on the client.

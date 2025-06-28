@@ -1,7 +1,9 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { User } from '../../libs/shared/types/user.entity';
-import { BloodTest } from '../../libs/shared/types/blood-test.entity';
+import { User } from './users/user.entity';
+import { BloodTest } from './blood-test/blood-test.entity';
+import { UsersModule } from './users/users.module';
+import { BloodTestModule } from './blood-test/blood-test.module';
 import { AuthModule } from './auth/auth.module';
 
 @Module({
@@ -17,6 +19,8 @@ import { AuthModule } from './auth/auth.module';
       synchronize: true,
     }),
     TypeOrmModule.forFeature([User, BloodTest]),
+    UsersModule,
+    BloodTestModule,
     AuthModule,
   ],
 })
