@@ -20,6 +20,7 @@ Install dependencies and run the apps:
 
 ```bash
 npm install
+docker compose up -d # start MySQL on port 3306
 npm run dev:servers  # start NestJS API on port 3001
 npm run dev:clients  # start Next.js app
 ```
