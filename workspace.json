@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "projects": {
+    "clients": {
+      "root": "apps/clients",
+      "projectType": "application",
+      "targets": {}
+    },
+    "servers": {
+      "root": "apps/servers",
+      "projectType": "application",
+      "targets": {}
+    },
+    "shared": {
+      "root": "libs/shared",
+      "projectType": "library",
+      "targets": {}
+    }
+  }
+}
